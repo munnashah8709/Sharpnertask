@@ -1,0 +1,20 @@
+/* Write your code here */
+
+form {
+    padding: 25px;
+    background-color: pink;
+}
+
+label {
+    font-style: italic; 
+}
+
+
+#name {
+    height: 25px;
+}
+
+.btn {
+    margin-top: 25px;
+    padding: 10px;
+}
