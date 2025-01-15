@@ -30,6 +30,7 @@ function displayExpenses() {
         const listItem = document.createElement('li');
         listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
         listItem.innerHTML = `
+            <h2>${expense.category} </h2>
             ${expense.amount} - ${expense.description} - ${expense.category}
             <div>
                 <button class="btn btn-sm btn-warning mr-2" onclick="editExpense(${index})">Edit</button>
