@@ -16,20 +16,16 @@ document.addEventListener("DOMContentLoaded", () => {
       };
   
       // Post the data to the API in JSON format
-      axios.post(
-        "https://crudcrud.com/api/07cb0ffad0f641bdbdc3f0b030a690a5/detailss",
-        productData,
+      axios.post("https://crudcrud.com/api/74479e581ee043c2b7470d054f709a85/detailss", productData,
         {
           headers: {
             "Content-Type": "application/json", // Explicitly set content type
           },
         }
-      )
-      .then((response) => {
+      ).then((response) => {
         console.log("Data posted successfully:", response.data);
         alert("Product added successfully!");
-      })
-      .catch((error) => {
+      }).catch((error) => {
         console.error("Error posting data:", error);
         alert("Failed to add product. Please try again.");
       });
@@ -41,12 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const productList = document.getElementById("productList");
 
     function fetchAndDisplayData() {
-        axios
-          .get("https://crudcrud.com/api/07cb0ffad0f641bdbdc3f0b030a690a5/detailss")
-          .then((response) => {
-            
+        axios.get("https://crudcrud.com/api/74479e581ee043c2b7470d054f709a85/detailss").then((response) => {  
            console.log(response.data)
-            // Clear the product list container before displaying new data
             productList.innerHTML = "";
       
             // Create a structure to hold categorized data
@@ -113,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       // Function to delete a product
       function deleteProduct(productId, listItem) {
-        axios.delete(`https://crudcrud.com/api/07cb0ffad0f641bdbdc3f0b030a690a5/detailss/${productId}`)
+        axios.delete(`https://crudcrud.com/api/74479e581ee043c2b7470d054f709a85/detailss/${productId}`)
           .then(() => {
             listItem.remove();
           })
