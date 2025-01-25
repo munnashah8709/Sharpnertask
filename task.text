@@ -1,0 +1,18 @@
+package.json
+The package.json file is the core metadata file for any Node.js project. It:
+Describes the project (name, version, author, etc.).
+Tracks project dependencies.
+Defines scripts for running tasks (e.g., start, test).
+Specifies the main entry point (e.g., main: "app.js").
+
+2. Nodemon
+What is it?: A development tool that automatically restarts your Node.js application whenever file changes are detected.
+Installation:
+Globally: npm install -g nodemon
+Locally (DevDependency): npm install --save-dev nodemon
+
+Dependencies:
+Packages required for the application to run.
+
+DevDependencies:
+Packages only needed for development (e.g., testing, debugging tools).
