@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
       
             // Display products category-wise
+
             for (const [category, products] of Object.entries(categorizedData)) {
               // Add category heading
               const categoryHeading = document.createElement("h3");

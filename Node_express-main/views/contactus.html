@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <navbar>
+        <ul>
+            <li> <a href="/login">Login</a></li>
+            <li><a href="/">Chat</a></li>
+            <li> <a href="/contactus">contactus</a></li>
+        </ul>
+    </navbar>
+    <form >
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+
+        <button type="button" onclick="submitForm()">submit</button>
+    </form>
+</body>
+<script>
+    function submitForm() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        if (name && email) {
+            localStorage.setItem('userName', name);
+           window.location.href = '/success';
+        }
+    }
+</script>
+</html>

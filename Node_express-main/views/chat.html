@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <navbar>
+        <ul>
+            <li> <a href="/login">Login</a></li>
+            <li><a href="/">Chat</a></li>
+            <li> <a href="/contactus">contactus</a></li>
+        </ul>
+    </navbar>
+    <div id="data-container"></div>
+    <form action="/" method="POST">
+        <input type="text" name="message">
+        <input type="hidden" name="username" id="usernameField">
+        <button type="submit">Send</button>
+    </form>
+    
+</body>
+<script>
+    const username = localStorage.getItem('userName');
+    document.getElementById('usernameField').value = username;
+
+    fetch('/data')
+        .then((response) => response.json())
+        .then((data) => {
+            document.getElementById('data-container').innerText = data.data;
+        });
+
+</script>
+</html>
